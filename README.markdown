@@ -19,7 +19,7 @@ Using the plugin
 
 1.  Include and invoke the plugin
 
-        <script src='af.equal-height.js'></script>
+        <script src='devfort.equal-height.js'></script>
         <script>
           $('[data-equal-height]').make_children_equal_height();
         </script>
@@ -39,4 +39,4 @@ Using the plugin
         );
 
 Initial version written by Mark Norman Francis at Art Discovery Ltd; subsequent
-work by James Aylett at NSFWCORP and then re-adopted by James and Norm at /dev/fort
+work by James Aylett at NSFWCORP and then re-adopted by James and Norm at /dev/fort.
