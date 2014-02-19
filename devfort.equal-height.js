@@ -2,7 +2,18 @@
 // Original by Art Discovery Ltd (https://github.com/artfinder/jquery-equal-height)
 
 (function($) {
-    
+    // This is pretty grubby
+    $.fn.set_minish_height = function(height) {
+        return this.each( function() {
+            var $this = $(this);
+            if ($this.css('display') == 'table') {
+                $this.css('height', height);
+            } else {
+                $this.css('min-height', height);
+            }
+        });
+    }
+
     $.fn.make_children_equal_height = function () {
         var make_equal_height = function (element) {
             var $within     = $(element),
@@ -12,8 +23,8 @@
             
             $children.each( function() {
                 var $this = $(this);
-                
-                $this.css('min-height', ''); 
+
+                $this.set_minish_height('');
                 var h = $this.height();
                 if ( h > tallest ) {
                     tallest = h;
@@ -21,7 +32,7 @@
             });
             
             $children.each( function() {
-                $(this).css('min-height', tallest + 'px'); 
+                $(this).set_minish_height(tallest + 'px');
             });
         };
         
@@ -37,7 +48,7 @@
                 $children   = $(selector, $within);
 
             $children.each( function() {
-                $(this).css('min-height', '');
+                $(this).set_minish_height('');
             });
         };
         return this.each( function () {

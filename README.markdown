@@ -38,5 +38,18 @@ Using the plugin
             $('[data-equal-height]').make_children_equal_height()
         );
 
+Notes
+-----
+
+ * Figures out height using `.height()`, ie all the elements matched by the
+   selector should have the same margin and padding or things won't line up
+
+ * For `display: table`, sets `height` not `min-height`; this is possibly
+   fragile, but at least allows you to get stuff done without adding shim
+   elements
+
+Credits
+-------
+
 Initial version written by Mark Norman Francis at Art Discovery Ltd; subsequent
 work by James Aylett at NSFWCORP and then re-adopted by James and Norm at /dev/fort.
