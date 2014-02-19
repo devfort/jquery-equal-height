@@ -38,6 +38,5 @@ Using the plugin
             $('[data-equal-height]').make_children_equal_height()
         );
 
-A [live example][example] is available.
-
-[example]:http://code.artfinder.com/jquery-equal-height.html
+Initial version written by Mark Norman Francis at Art Discovery Ltd; subsequent
+work by James Aylett at NSFWCORP and then re-adopted by James and Norm at /dev/fort
